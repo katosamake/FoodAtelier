@@ -1,0 +1,14 @@
+Django==4.1
+uvicorn
+gunicorn
+django-select2
+psycopg2-binary
+autopep8
+django-import-export
+django-debug-toolbar
+django-environ
+coverage
+django-multiselectfield
+django-summernote
+djangorestframework
+django-cors-headers

@@ -1,0 +1,84 @@
+.top-40{
+    top: 40%!important;
+}
+.button-hover{
+    color: #fff;
+    background-color: #fff;
+}
+
+/* navとsidevarとの間隔 */
+.main-padding-top {
+    padding-top: 60px!important;
+    transition: all .3s ease-out; 
+}
+
+.main-padding-left {
+    padding-left: 0px!important;
+}
+
+
+/* offcanvasサイズ */
+.offcanvas-default {
+    width:100%!important; 
+}
+
+.offcanvas-btn-hover:hover {
+    background-color:rgba(255,255,255,0.2)!important;
+}
+
+.accordion-image:not(.collapsed)::after {
+    background-image: url(
+        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="%23ffffff" class="bi bi-caret-down" viewBox="0 0 16 16"><path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg>'
+    )!important;
+}
+
+.accordion-image::after {
+    background-image: url(
+        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="%23ffffff" class="bi bi-caret-down" viewBox="0 0 16 16"><path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg>'
+    )!important;
+}
+
+.accordion-image-issue:not(.collapsed)::after {
+    background-image: url(
+        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="%23ffffff" class="bi bi-caret-down" viewBox="0 0 16 16"><path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg>'
+    )!important;
+}
+
+.accordion-image-issue::after {
+    background-image: url(
+        'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="%23ffffff" class="bi bi-caret-down" viewBox="0 0 16 16"><path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/></svg>'
+    )!important;
+}
+
+/* タブレット */
+@media (min-width: 576px) {
+    .offcanvas-default{
+        width:300px!important;
+        z-index:-1!important;
+    }
+    .main-padding-top {
+        padding-top: 60px!important; 
+    }
+    
+    .main-padding-left {
+        padding-left: 310px!important;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+/* PC */
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) { 
+
+}
