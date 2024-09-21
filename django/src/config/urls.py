@@ -9,3 +9,6 @@ urlpatterns = [
     path('home/', include('home.urls')),
     # path('__debug__/', include('debug_toolbar.urls')), # 開発環境のみ
 ]
+
+
+

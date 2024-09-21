@@ -33,7 +33,7 @@ services:
     container_name: django
     build:
       context: .
-      dockerfile: django/docker/Dockerfile
+      dockerfile: ./django/docker/Dockerfile
     ports:
       - 8000:8000
     expose:
@@ -49,7 +49,7 @@ services:
   react:
     container_name: react
     build:
-      dockerfile: /react/docker/Dockerfile
+      dockerfile: ./react/docker/Dockerfile
     volumes:
       - ./react/node:/usr/src/app
     command: sh -c "cd /usr/src/app && yarn start"

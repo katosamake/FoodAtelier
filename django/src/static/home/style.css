@@ -1,0 +1,33 @@
+@charset "UTF-8";
+header {
+    background-color: #5BC3D5;
+    color: #fff;
+    padding: 30px;
+}
+h1{
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin: 10px 20px;
+    font-family: 'HanziPen SC', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 70vh;
+    
+}
+.item{
+    background: #b0e0e6;
+    color:#fff;
+    margin: 60px;
+    padding: 80px;
+    font-family: 'HanziPen SC', sans-serif;
+    border-radius: 50%;
+}
+footer {
+    background-color: #5BC3D5;
+    color: #fff;
+    padding: 100px;
+}
