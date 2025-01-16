@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'admin/css/watch/watch.css' %}">
+    <title>料理詳細画面の表示</title>
+</head>
+<body>
+    {% block body %}
+    
+    <h2>{{ watch_detail.food_name }}</h2>
+    <div>{{ watch_detail.first_date }}</div>
+    {% if watch_detail.picture %}
+        <img src="{{ watch_detail.picture.url }}"/>
+    {% endif %}
+    <div>{{ watch_detail.memo }}</div>
+    <br>
+    <div class="label_title">{{watch_detail.label_title1}}</div>
+    <div class="label_title">{{watch_detail.label_title2}}</div>
+    <div class="label_title">{{watch_detail.label_title3}}</div>
+    <div class="label_title">{{watch_detail.label_title4}}</div>
+    <div class="label_title">{{watch_detail.label_title5}}</div>
+    <div class="label_title">{{watch_detail.label_title6}}</div>
+    <div class="label_title">{{watch_detail.label_title7}}</div>
+    <div class="label_title">{{watch_detail.label_title8}}</div>
+    {% endblock %}
+
+    <br>
+    <a href="{% url 'home:record_update' watch_detail.id %}">編集</a>
+    <a href="{% url 'home:record_delete' watch_detail.id %}">削除</a>
+
+
+
+</body>
+</html>

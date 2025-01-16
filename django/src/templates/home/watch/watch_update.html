@@ -1,17 +1,14 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'admin/css/record/record.css' %}">
     <title>食のアトリエ</title>
 </head>
 <body>
-    <h2>作った料理</h2>
+    <h2>作ったごはん</h2>
     <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
         <h4>料理名</h4>
             {{form.food_name}}
         <br>
@@ -34,14 +31,10 @@
             <div class="label_field">{{ label6.label_title_name }}<br>{{ form.label_title6 }}</div>
             <div class="label_field">{{ label7.label_title_name }}<br>{{ form.label_title7 }}</div>
             <div class="label_field">{{ label8.label_title_name }}<br>{{ form.label_title8 }}</div>
-            <a href= "{% url "home:record_label" %}">ラベル編集</a>
         </div>
         <br>
         <br>
-        <br>
-        <button type="submit">記録する</button>
+        <button type="submit">更新する</button>
     </form>
-    <br><br>
-    <a href= "{% url 'home:home' %}">ホームに戻る</a>
 </body>
 </html>

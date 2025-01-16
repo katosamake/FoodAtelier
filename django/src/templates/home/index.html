@@ -9,23 +9,56 @@
         <title>FoodAtelier</title>
         <link rel="stylesheet" href="{% static 'home/style.css' %}"> 
     </head>
-
     <header>
-        <h1>食のアトリエ</h1>
+        <h1>Food Atllier</h1>
     </header>
-
     <main>
-        <p>testtest</p>
-        <div class="container">
-            <div class="item">記録する</div>
-            <div class="item">決める</div>
-            <div class="item">眺める</div>
+        <img src="{% static 'home/FoodAtllier.jpg' %}" alt="FoodAtllier" class="FoodAtllier">
+        <div class="section1">
+        <a href="{% url "home:deside" %}">
+            <img src="{% static 'home/mokumoku.png' %}" alt="吹き出し" class="mokumoku1">
+        </a>
+        <img src="{% static 'home/bikkuri.jpg' %}" alt="決める"class="bikkuri">
+            <div class="deside">
+                <h5>決める</h5>
+            </div>
         </div>
+        <div class="container">
+            <div class="section2">
+                <img src="{% static 'home/note.jpg' %}" alt="ノート" class="note">
+                <div class="recipe">
+                    <ul>
+                        {% for watch in watch_list %}
+                            <li>{{ watch.first_date }}:
+                                <a href="{% url 'home:watch_detail' watch.id %}">{{ watch.food_name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {% if not watch_list %}
+                        <p>作ったごはんが１つもありません</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="section3">
+                <a href="{% url "home:record" %}">
+                    <img src="{% static 'home/mokumoku.png' %}" alt="吹き出し" class="mokumoku2">
+                </a>
+                <img src="{% static 'home/pen.png' %}" alt="ペン"class="pen">
+                <div class="record">
+                    <h5>記録する</h5>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
     </main>
-
-    <footer>
-    </footer>
-
 </html>
 
 

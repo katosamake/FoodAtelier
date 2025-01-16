@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>子ラベルの表示</h1>
+    
+    {%block body%}    
+    <ul>
+        {% for label in label_detail %}
+        <li style="display:inline-block; margin-right:10px;">{{ label.label_detail_name }}
+            <br>
+            <a href="{% url 'home:record_label_detail_update' label.id %}">編集</a>
+        </li>
+        {% if forloop.counter|divisibleby:3 %}
+        <br>
+        <br>
+        <br>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
